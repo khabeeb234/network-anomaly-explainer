@@ -1,0 +1,17 @@
+timestamp,event,details
+2025-11-01 09:32:00,BGP route update,New prefix announced by peer AS64512 - possible route flap
+2025-11-01 09:37:00,Interface flap,Gi0/1 on CoreRouter-1 down/up detected
+2025-11-01 09:38:00,ACL change,Access list modified for WAN interface on EdgeRouter-2
+2025-11-01 10:04:00,CPU utilization alert,Router-R3 CPU exceeded 90% threshold
+2025-11-01 10:06:00,BGP route withdraw,Prefix withdrawn by upstream provider - temporary routing blackhole
+2025-11-01 10:33:00,QoS policy change,Priority queue parameters adjusted on CoreRouter-1
+2025-11-01 10:36:00,Firewall policy update,Security policy reloaded on perimeter firewall
+2025-11-01 10:39:00,Link error,CRC error burst on WAN link between SiteA and SiteB
+2025-11-01 11:09:00,Router reboot,Router-R2 rebooted for maintenance window
+2025-11-01 11:11:00,Link congestion,Interface utilization exceeded 95% on MPLS link
+2025-11-01 11:24:00,BGP peer flap,Peer AS64513 re-established after timeout
+2025-11-01 11:51:00,ACL modification,New policy added for HTTP inspection on EdgeRouter-3
+2025-11-01 12:13:00,Route redistribution,Redistribution configured between OSPF and BGP
+2025-11-01 12:18:00,Interface error,High error rate detected on CoreRouter-2 Gi0/2
+2025-11-01 12:17:00,Traffic shaping,Traffic policy modified for video traffic on WAN
+2025-11-01 12:55:00,Route convergence,New best path selected after OSPF SPF recalculation

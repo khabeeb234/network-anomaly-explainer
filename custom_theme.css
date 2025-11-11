@@ -1,0 +1,35 @@
+body {
+    background-color: #0d1117;
+    color: #d9e2f2;
+    background-image: url("dashboard_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+    color: #58b8ff !important;
+}
+
+.stApp {
+    background: rgba(10, 15, 25, 0.9);
+}
+
+.stButton>button {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    color: white !important;
+    font-weight: bold;
+    border-radius: 6px !important;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 12px rgba(0,150,255,0.5);
+}
+
+.stButton>button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,255,0.8);
+}
+
+hr {
+    border: 1px solid rgba(88,184,255,0.3);
+}
