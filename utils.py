@@ -153,9 +153,12 @@ Keep tone professional and safe.
 # ===============================================================
 # 5️⃣ BUILD REPORT (WITH RATE-LIMIT DELAY)
 # ===============================================================
+import time
+
 def build_report(metrics_df, changes_df, window_seconds=300, use_llm=True):
     """Generate AI explanations with delay to respect free-tier rate limits."""
     anomalies = []
+
     for _, row in metrics_df.iterrows():
         if row.get("anomaly_isof", False):
             change_records = simple_time_correlation(row["timestamp"], changes_df, window_seconds)
@@ -168,10 +171,17 @@ def build_report(metrics_df, changes_df, window_seconds=300, use_llm=True):
                 "changes": change_records,
                 "explanation": explanation
             })
+
             # 🕒 Respect Gemini free-tier limit (≈ 2 req/min)
             if use_llm:
                 print("⏳ Waiting 20 s to respect Gemini API quota…")
                 time.sleep(20)
+
+    if not anomalies:
+        print("✅ No anomalies detected.")
+    else:
+        print(f"✅ Generated explanations for {len(anomalies)} anomalies.")
+
     return anomalies
 
 # ===============================================================
